@@ -60,7 +60,7 @@ b {
   opacity: 0;
 }
 #liner::before {
-  color: #519975;
+  color: #e6800b;
   content: "popeye@TJHirani.com:~$";
 }
 #liner.password::before {
@@ -106,7 +106,7 @@ p {
   color: #B89076;
 }
 .command {
-  color: #73ABAD;
+  color: #4fc9cd;
   text-shadow: 0 0 5px #73ABAD; 
 }
 .error {
