@@ -48,6 +48,7 @@ help = [
   '<span class="command">history</span>        View command history',
   '<span class="command">help</span>           You obviously already know what this does',
   '<span class="command">email</span>          Do not email me',
+  '<span class="command">banner</span>         Display the header',
   '<span class="command">clear</span>          Clear terminal',
   "<br>",
 ];
