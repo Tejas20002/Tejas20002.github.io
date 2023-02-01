@@ -55,7 +55,7 @@ function enterKey(e) {
     if (e.keyCode == 13) {
       commands.push(command.innerHTML);
       git = commands.length;
-      addLine("popeye@TJHirani.com:~$ " + command.innerHTML, "no-animation", 0);
+      addLine('<span style="color: #e6800b">popeye@TJHirani.com:~$ </span>' + command.innerHTML, "no-animation", 0);
       commander(command.innerHTML.toLowerCase());
       command.innerHTML = "";
       textarea.value = "";
