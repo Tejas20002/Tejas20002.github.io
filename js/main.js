@@ -79,6 +79,8 @@ function enterKey(e) {
 
 function commander(cmd) {
   switch (cmd.toLowerCase()) {
+    case "":
+      break;
     case "help":
       loopLines(help, "color2 margin", 80);
       break;
