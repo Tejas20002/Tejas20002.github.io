@@ -1,4 +1,4 @@
-var gitlab = "https://www.youtubehttps://gitlab.com/tjhirani";
+var gitlab = "https://gitlab.com/tjhirani";
 var twitter = "https://www.twitter.com/tjhirani/";
 var password = "tjhirani";
 var linkedin = "https://www.linkedin.com/in/tjhirani";

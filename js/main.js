@@ -127,7 +127,7 @@ function commander(cmd) {
       break;
     // socials
     case "gitlab":
-      addLine("Opening YouTube...", "color2", 80);
+      addLine("Opening Gitlab...", "color2", 80);
       newTab(gitlab);
       break;
     case "twitter":
