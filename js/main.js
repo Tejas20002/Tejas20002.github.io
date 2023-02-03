@@ -90,6 +90,9 @@ function commander(cmd) {
     case "whoami":
       loopLines(whoami, "color2 margin", 80);
       break;
+    case "profile":
+      loopLines(profile, "color2 margin", 80);
+      break;
     case "sudo":
       addLine("Oh no, you're not admin...", "color2", 80);
       setTimeout(function() {
