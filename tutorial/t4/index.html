@@ -1,0 +1,383 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+<hr>Q1<hr>
+
+<!DOCTYPE html>
+  <html>
+  <head>
+  <script src="https://code.jquery.com/jquery-git.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Set the background color red of the following elements using jQuery.</title>
+  <style type="text/css">
+  button {
+  display: block;
+  margin: 20px 0 0 0;
+  }   </style>
+</head>
+  <body>
+  <textarea>TutoRIAL</textarea> 
+  <p>jQuery</p>
+  <span>Exercises</span>
+  <button id="button1">Click to see the effect</button>
+  <script type="text/javascript">
+      $('#button1').click(function(){ 
+$("p").add( "span" ).add("textarea").css( "background", "yellow" );
+});
+
+  </script>
+  </body>
+  </html>
+
+
+<hr>Q2<hr>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+Checkbox: <input type="checkbox" id="myCheck">
+
+<p>Click the "Try it" button to disable the checkbox.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("myCheck").disabled = true;
+}
+</script>
+
+</body>
+</html>
+
+<hr>Q3<hr>
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+
+</script>
+
+<script>
+
+$(document).ready(function()
+
+{
+
+  $("button").click(function(){
+
+    $("img").attr({width: "260", height: "90"});
+
+  });
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+<img src="OIP.jpg" alt="Website" width="500" height="200"><br>
+
+<button>Set image width to 250px and height to 100px</button>
+
+</body>
+
+</html>
+
+
+
+<hr>Q4<hr>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="id01">Old Heading</h1>
+
+<script>
+const element = document.getElementById("id01");
+element.innerHTML = "New Heading";
+</script>
+
+<p>JavaScript changed "Old Heading" to "New Heading".</p>
+
+</body>
+</html> 
+
+
+<hr>Q5<hr>
+<div class="d-flex flex-row justify-content-between">
+    <p class="mb-0 me-1 py-2 ps-4 add-text" id="p1">ygwbfewilskfhnewisfklnewiofjfhjky</p>
+    <button class="btn-primary w-20 px-3 copy-btn" onclick="copyToClipboard('#p1')">Copy<i class="fa-regular fa-copy ps-2"></i></button>
+  </div>
+  <script>
+  function copyToClipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+  }
+</script>
+
+
+<hr>Q6</hr>
+<hr>[a]  The onmousedown Event</hr>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The onmousedown Event</h2>
+
+<p>Clock the text below!</p>
+<p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()">
+The mouseDown() function sets the color of this text to red.
+The mouseUp() function sets the color of this text to blue.
+</p>
+
+<script>
+function mouseDown() {
+  document.getElementById("myP").style.color = "red";
+}
+
+function mouseUp() {
+  document.getElementById("myP").style.color = "blue";
+}
+</script>
+
+</body>
+</html>
+
+<hr>[b] The onmouseenter Event</hr>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The onmouseenter Event</h2>
+
+<img onmouseenter="bigImg(this)" onmouseleave="normalImg(this)" border="0" src="smiley.gif" alt="Smiley" width="32" height="32">
+
+<p>The function bigText() is triggered when the user moves the mouse pointer onto the text.</p>
+<p>The function normalText() is triggered when the mouse pointer is moved out of the text.</p>
+
+<script>
+function bigImg(x) {
+  x.style.height = "64px";
+  x.style.width = "64px";
+}
+
+function normalImg(x) {
+  x.style.height = "32px";
+  x.style.width = "32px";
+}
+</script>
+
+</body>
+</html>
+
+<hr>[c] Mousemove, [d] Mouseenter, [e] Mouseover</hr>
+
+<!DOCTYPE html>
+<html>
+<style>
+div {
+  width: 150px;
+  height: 100px;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  background-color: lightgray;
+}
+</style>
+
+<body>
+
+
+<div onmousemove="myMoveFunction()">
+  <p>onmousemove</p>
+  <p id="demo1">Mouse over me!</p>
+</div>
+
+<div onmouseenter="myEnterFunction()">
+  <p>onmouseenter</p>
+  <p id="demo2">Mouse over me!</p>
+</div>
+
+<div onmouseover="myOverFunction()">
+  <p>onmouseover</p>
+  <p id="demo3">Mouse over me!</p>
+</div>
+
+<p>The onmousemove event occurs every time the mouse pointer is moved over an element.</p>
+<p>The mouseenter event only occurs when the mouse pointer enters an element. </p>
+<p>The onmouseover event occurs when the mouse pointer enters an div element.</p>
+
+
+<script>
+let x = 0;
+let y = 0;
+let z = 0;
+
+function myMoveFunction() {
+  document.getElementById("demo1").innerHTML = z+=1;
+}
+
+function myEnterFunction() {
+  document.getElementById("demo2").innerHTML = x+=1;
+}
+
+function myOverFunction() {
+  document.getElementById("demo3").innerHTML = y+=1;
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+<hr>Q7</hr>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial tasks</title>
+</head>
+
+<body>
+    <p style="font-size: 24px;" id="bol">🎈</p>
+    <button id="temp">Temp</button>
+    <script>
+
+        const balloon = document.getElementById('bol');
+        const defaultSize = parseFloat(balloon.style.fontSize);
+        let size = defaultSize;
+
+        window.addEventListener('keydown', event => {
+            if (event.key == 'ArrowUp') {
+                setSize(size * 1.1);
+                event.preventDefault();
+            }
+            else if (event.key == 'ArrowDown') {
+                if (size > defaultSize) {
+                    setSize(size * 0.9);
+                    event.preventDefault();
+                }
+            }
+        });
+
+        function setSize(newSize) {
+            size = newSize;
+            balloon.style.fontSize = size + "px";
+        }
+
+        document.getElementById('temp').addEventListener('click', () => {
+            setSize(40);
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+<hr>
+Q8
+<hr>
+<input type="button" id="button" value="start" />
+
+<div id="an" style="width:100px; height:100px;background-color:red; margin: 0px 0px 100px 0px;">
+
+    <script>
+        $("#button").click(function () {
+            var a = $("#an");
+            if ($(this).val() == 'start') {
+                $(this).val("stop");
+                var v = setInterval(function () { animate(a) }, 1000);
+            } else if ($(this).val() == 'stop') {
+                $(this).val("start");
+                setInterval(function () { stop(a) }, 1000);
+            }
+        })
+
+        function animate(a) {
+            a.animate({ width: 200, opacity: 0.5 }, "slow");
+            a.animate({ height: 200, opacity: 0.5 }, "slow");
+            a.animate({ width: 100, opacity: 0.8 }, "slow");
+            a.animate({ height: 100, opacity: 0.8 }, "slow");
+        }
+
+        function stop(a) {
+            a.animate({ width: 300, opacity: 1 }, "slow");
+        }
+
+    </script>
+</div>
+
+
+
+<hr>Q9>
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("p").hide();
+  });
+  $("#show").click(function(){
+    $("p").show();
+  });
+});
+</script>
+</head>
+<body>
+
+<p>If you click on the "Hide" button, Text  will disappear.</p>
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+
+</body>
+</html>
+
+
+
+Q10<br>
+<script>
+    var texts = [" \" It's really hard to design products by focus groups. A lot of times, people don't know what they want until you show it to them. \" <br /> ~ Steve Jobs ", " \"  Design is not just what it looks like and feels like. Design is how it works \" <br /> ~ Steve Jobs", " \" That’s been one of my mantras — focus and simplicity. Simple can be harder than complex ; you have to work hard to get your thinking clean to make it simple. \" <br /> ~ Steve Jobs", " \" The present is theirs ; the future, for which I really worked, is mine. \" <br /> ~ Nikola Tesla ", " \” The value of an idea lies in the using of it. \“ <br /> ~ Thomas Edison "];
+    var count = 0;
+
+    $(document).ready(function () {
+        function changeText() {
+            $(".quote").fadeOut(100, function () {
+                $(this).html(texts[count]).fadeIn(250);
+            });
+            $(".quote1").fadeToggle(2500)
+            $(".quote2").fadeTo(1000, 0.1);
+            count < texts.length ? count++ : count = 0;
+        }
+        setInterval(changeText, 2000);
+    });
+</script>
+<h1 class="quote">Hello</h1>
+<h1 class="quote1">" It's really hard to design products by focus groups. A lot of times, people don't know what they
+    want until you show it to them. "</h1>
+<h1 class="quote2">" Design is not just what it looks like and feels like. Design is how it works "</h1>
+<hr>
