@@ -79,6 +79,8 @@ function enterKey(e) {
 
 function commander(cmd) {
   switch (cmd.toLowerCase()) {
+    case "":
+      break;
     case "help":
       loopLines(help, "color2 margin", 80);
       break;
@@ -127,7 +129,7 @@ function commander(cmd) {
       break;
     // socials
     case "gitlab":
-      addLine("Opening YouTube...", "color2", 80);
+      addLine("Opening Gitlab...", "color2", 80);
       newTab(gitlab);
       break;
     case "twitter":
