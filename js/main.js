@@ -93,6 +93,9 @@ function commander(cmd) {
     case "profile":
       loopLines(profile, "color2 margin", 80);
       break;
+    case "skill":
+      loopLines(skill, "color2 margin", 80);
+      break;
     case "sudo":
       addLine("Oh no, you're not admin...", "color2", 80);
       setTimeout(function() {
