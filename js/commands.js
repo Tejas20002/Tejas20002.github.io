@@ -7,7 +7,7 @@ var github = "https://github.com/tejas20002/";
 var email = 'mailto:tejashirani55@gmail.com';
 var domain = window.location.origin;
 var t1 = domain+"/tutorial/t1/index.html";
-var t2 = domain+"/tutorial/t2/index.php";
+var t2 = domain+"/tutorial/t2/";
 var t4 = domain+"/tutorial/t4/index.html";
 var t5 = domain+"/tutorial/t5/index.html";
 
