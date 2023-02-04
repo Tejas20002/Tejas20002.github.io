@@ -6,6 +6,7 @@ var instagram = "https://www.instagram.com/tjhirani/";
 var github = "https://github.com/tejas20002/";
 var email = 'mailto:tejashirani55@gmail.com';
 var domain = window.location.origin;
+var t1 = domain+"/tutorial/t1/index.index";
 var t2 = domain+"/tutorial/t2/index.php";
 var t4 = domain+"/tutorial/t4/index.html";
 var t5 = domain+"/tutorial/t5/index.html";
@@ -39,6 +40,7 @@ secret = [
 
 projects = [
   "<br>",
+  'Tutorial 1         <a href="' + t1 + '" target="_blank">Tutorial 1 {Responsive Web Design}' + "</a>",
   'Tutorial 2         <a href="' + t2 + '" target="_blank">Tutorial 2 {Login and Registration Form}' + "</a>",
   'Tutorial 4         <a href="' + t4 + '" target="_blank">Tutorial 4 {JQuery Selector and Methods}' + "</a>",
   'Tutorial 5         <a href="' + t5 + '" target="_blank">Tutorial 5 {jQuery UI }' + "</a>",
