@@ -49,6 +49,8 @@ projects = [
   'Tutorial 4         <a href="' + t4 + '" target="_blank">Tutorial 4 {JQuery Selector and Methods}' + "</a>",
   'Tutorial 5         <a href="' + t5 + '" target="_blank">Tutorial 5 {jQuery UI}' + "</a>",
   'Tutorial 7         <a href="' + t7 + '" target="_blank">Tutorial 7 {PHP}' + "</a>",
+  'Tutorial 8         <a href="' + t8 + '" target="_blank">Tutorial 7 {PHP Looping Statements}' + "</a>",
+  'Tutorial 9         <a href="' + t9 + '" target="_blank">Tutorial 9 {PHP}' + "</a>",
   "Still curating... most projects are offline, on GitHub, or confidential.",
   "<br>"
 ];
