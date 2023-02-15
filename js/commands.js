@@ -10,6 +10,10 @@ var t1 = domain+"/tutorial/t1/index.html";
 var t2 = domain+"/tutorial/t2/";
 var t4 = domain+"/tutorial/t4/index.html";
 var t5 = domain+"/tutorial/t5/index.html";
+var t6 = "http://hellodev.getenjoyment.net/t6/";
+var t7 = "http://hellodev.getenjoyment.net/t7/";
+var t8 = "http://hellodev.getenjoyment.net/t8/";
+var t9 = "http://hellodev.getenjoyment.net/t9/";
 
 whois = [
   "<br>",
@@ -43,7 +47,8 @@ projects = [
   'Tutorial 1         <a href="' + t1 + '" target="_blank">Tutorial 1 {Responsive Web Design}' + "</a>",
   'Tutorial 2         <a href="' + t2 + '" target="_blank">Tutorial 2 {Login and Registration Form}' + "</a>",
   'Tutorial 4         <a href="' + t4 + '" target="_blank">Tutorial 4 {JQuery Selector and Methods}' + "</a>",
-  'Tutorial 5         <a href="' + t5 + '" target="_blank">Tutorial 5 {jQuery UI }' + "</a>",
+  'Tutorial 5         <a href="' + t5 + '" target="_blank">Tutorial 5 {jQuery UI}' + "</a>",
+  'Tutorial 7         <a href="' + t7 + '" target="_blank">Tutorial 7 {PHP}' + "</a>",
   "Still curating... most projects are offline, on GitHub, or confidential.",
   "<br>"
 ];
