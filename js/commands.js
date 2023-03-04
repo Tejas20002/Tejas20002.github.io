@@ -55,7 +55,6 @@ projects = [
   'Tutorial 8         <a href="' + t8 + '" target="_blank">Tutorial 8 {PHP Looping Statements}' + "</a>",
   'Tutorial 9         <a href="' + t9 + '" target="_blank">Tutorial 9 {PHP}' + "</a>",
   'Tutorial 10        <a href="' + t10 + '" target="_blank">Tutorial 10 {PHP Database Connection}' + "</a>",
-  "Still curating... most projects are offline, on GitHub, or confidential.",
   'Tutorial 11        <a href="' + t11 + '" target="_blank">Tutorial 11 {PHP Array and foreach loop}' + "</a>",
   "Still curating... most projects are offline, on GitHub, or confidential.",
   "<br>"
