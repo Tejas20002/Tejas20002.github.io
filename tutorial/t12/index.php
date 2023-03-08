@@ -1,4 +1,18 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+//Load Composer's autoloader
+require 'vendor/autoload.php';
+
+//Create an instance; passing `true` enables exceptions
+$mail = new PHPMailer(true);
+@$body = "Hello Friends!";
+@$sub = "Contact for us!";
+@$email = $_POST['email'];
+@$name = "Hello Dev";
+
 $con = mysqli_connect('localhost', 'popeye', 'apstndp@20', 'pizza') or die();
 // $con = mysqli_connect('fdb29.awardspace.net', '3670910_test', 'apstndp@20', '3670910_test') or die();
 $query_user = mysqli_query($con, "SELECT * FROM `image`");
@@ -11,10 +25,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])) {
         if(move_uploaded_file($_FILES['file']['tmp_name'], "uploads/".$fileName)){
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            $sql = "INSERT INTO `image`(`email`, `password`, `image`) VALUES ('$email','$password','$fileName')";
-            $query = mysqli_query($con, $sql);
+            try {
+                $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+                $mail->isSMTP();
+                $mail->Host = 'smtp.gmail.com';
+                $mail->SMTPAuth = true;
+                $mail->Username ='popeyeapisite@gmail.com';
+                $mail->Password = 'dbftbnyhpbbzfmlb';
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+                $mail->Port = 465;
+           
+               $mail->setFrom('popeyeapisite@gmail.com', 'Mailer');
+               $mail->addAddress($email, "$name");  
+               $mail->addReplyTo($email, "$name");
+             
+               $mail->isHTML(true);
+               $mail->Subject = $sub;
+               $mail->Body = $body; 
+               $mail->send();
+               $email = $_POST['email'];
+                $password = $_POST['password'];
+                $sql = "INSERT INTO `image`(`email`, `password`, `image`) VALUES ('$email','$password','$fileName')";
+                $query = mysqli_query($con, $sql);
+               $statusMsg = "Emial send Success";
+           } catch (Exception $e) {
+               $statusMsg = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+           }
             if(isset($_POST['remember'])){
                 setcookie("email",$email,time()+60*60);			
                 setcookie("passowrd",$password,time()+60*60);	
@@ -44,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      if($query){
         echo '
         <div class="alert alert-success alert-dismissible fade show" role="alert">
-  <strong>Register</strong> Done.
+  <strong>Register</strong> Done! Email send successfully.
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
         ';
