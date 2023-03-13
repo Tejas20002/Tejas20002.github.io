@@ -17,6 +17,7 @@ var t9 = "http://hellodev.getenjoyment.net/t9/";
 var t10 = "http://hellodev.getenjoyment.net/t10/";
 var t11 = "http://hellodev.getenjoyment.net/t11/";
 var t12 = "http://hellodev.getenjoyment.net/t12/";
+var t13 = "http://hellodev.getenjoyment.net/t13/";
 
 whois = [
   "<br>",
@@ -58,6 +59,7 @@ projects = [
   'Tutorial 10        <a href="' + t10 + '" target="_blank">Tutorial 10 {PHP Database Connection}' + "</a>",
   'Tutorial 11        <a href="' + t11 + '" target="_blank">Tutorial 11 {PHP Array and foreach loop}' + "</a>",
   'Tutorial 12        <a href="' + t12 + '" target="_blank">Tutorial 12 {Cookie, Email and File Upload}' + "</a>",
+  'Tutorial 13        <a href="' + t13 + '" target="_blank"> Tutorial 13 {Class and Object}' + "</a>",
   "Still curating... most projects are offline, on GitHub, or confidential.",
   "<br>"
 ];
