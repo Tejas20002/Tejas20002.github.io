@@ -6,18 +6,6 @@ var instagram = "https://www.instagram.com/tjhirani/";
 var github = "https://github.com/tejas20002/";
 var email = 'mailto:tejashirani55@gmail.com';
 var domain = window.location.origin;
-var t1 = domain+"/tutorial/t1/index.html";
-var t2 = domain+"/tutorial/t2/";
-var t4 = domain+"/tutorial/t4/index.html";
-var t5 = domain+"/tutorial/t5/index.html";
-var t6 = "http://hellodev.getenjoyment.net/t6/";
-var t7 = "http://hellodev.getenjoyment.net/t7/";
-var t8 = "http://hellodev.getenjoyment.net/t8/";
-var t9 = "http://hellodev.getenjoyment.net/t9/";
-var t10 = "http://hellodev.getenjoyment.net/t10/";
-var t11 = "http://hellodev.getenjoyment.net/t11/";
-var t12 = "http://hellodev.getenjoyment.net/t12/";
-var t13 = "http://hellodev.getenjoyment.net/t13/";
 
 whois = [
   "<br>",
@@ -48,18 +36,6 @@ secret = [
 
 projects = [
   "<br>",
-  'Tutorial 1         <a href="' + t1 + '" target="_blank">Tutorial 1 {Responsive Web Design}' + "</a>",
-  'Tutorial 2         <a href="' + t2 + '" target="_blank">Tutorial 2 {Login and Registration Form}' + "</a>",
-  'Tutorial 4         <a href="' + t4 + '" target="_blank">Tutorial 4 {JQuery Selector and Methods}' + "</a>",
-  'Tutorial 5         <a href="' + t5 + '" target="_blank">Tutorial 5 {jQuery UI}' + "</a>",
-  'Tutorial 6         <a href="' + t6 + '" target="_blank">Tutorial 6 {jQuery Form Validation}' + "</a>",
-  'Tutorial 7         <a href="' + t7 + '" target="_blank">Tutorial 7 {PHP}' + "</a>",
-  'Tutorial 8         <a href="' + t8 + '" target="_blank">Tutorial 8 {PHP Looping Statements}' + "</a>",
-  'Tutorial 9         <a href="' + t9 + '" target="_blank">Tutorial 9 {PHP}' + "</a>",
-  'Tutorial 10        <a href="' + t10 + '" target="_blank">Tutorial 10 {PHP Database Connection}' + "</a>",
-  'Tutorial 11        <a href="' + t11 + '" target="_blank">Tutorial 11 {PHP Array and foreach loop}' + "</a>",
-  'Tutorial 12        <a href="' + t12 + '" target="_blank">Tutorial 12 {Cookie, Email and File Upload}' + "</a>",
-  'Tutorial 13        <a href="' + t13 + '" target="_blank"> Tutorial 13 {Class and Object}' + "</a>",
   "Still curating... most projects are offline, on GitHub, or confidential.",
   "<br>"
 ];
@@ -115,7 +91,7 @@ banner = [
 ];
 
 profile = [
-'  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣤⣤⣤⣶⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀',
+'  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣤⣤⣤⣶⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀',
 '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣤⣶⣾⣿⣟⣛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀',
 '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣻⣿⣿⣻⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀',
 '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣿⣿⣿⣿⣿⣧⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀',
