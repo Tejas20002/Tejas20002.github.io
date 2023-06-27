@@ -100,7 +100,7 @@ function commander(cmd) {
       addLine("Oh no, you're not admin...", "color2", 80);
       setTimeout(function() {
         window.open('https://github.com/tejas20002');
-      }, 1000); 
+      }, 500); 
       break;
     case "social":
       loopLines(social, "color2 margin", 80);
