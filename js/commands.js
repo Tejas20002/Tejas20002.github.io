@@ -69,6 +69,7 @@ skill = [
   '<span class="command">Python</span>        <a href="https://www.python.org/" target="_blank">Python</a>',
   '<span class="command">Git</span>           <a href="https://git-scm.com/" target="_blank">Git</a>',
   '<span class="command">Github</span>        <a href="https://github.com/" target="_blank">Github</a>',
+  '<span class="command">Gitlab</span>        <a href="https://gitlab.com/" target="_blank">Gitlab</a>',
   '<span class="command">Docker</span>        <a href="https://www.docker.com/" target="_blank">Docker</a>',
   '<span class="command">Postman</span>       <a href="https://www.postman.com/" target="_blank">Postman</a>',
   '<span class="command">Linux</span>         <a href="https://www.linux.org/" target="_blank">Linux</a>',
