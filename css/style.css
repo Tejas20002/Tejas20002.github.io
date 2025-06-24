@@ -129,3 +129,34 @@ a:hover {
 a:focus {
   outline: 0;
 }
+
+body.light-theme {
+  background: #f4f4f4;
+  color: #222;
+}
+
+body.matrix-theme {
+  background: black;
+  color: #00ff00;
+  animation: matrix-bg 1s infinite alternate;
+}
+
+@keyframes matrix-bg {
+  from { background-color: black; }
+  to { background-color: #002200; }
+}
+
+#theme-switcher {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+#theme-switcher button {
+  margin-left: 0.5rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
