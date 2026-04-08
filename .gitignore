@@ -3,7 +3,6 @@ node_modules/
 webssh-server/node_modules/
 
 # Build output
-dist/
 
 # Env files
 .env.local
