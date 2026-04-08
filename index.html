@@ -1,37 +1,18 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TJHirani Terminal</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tejas Hirani — Portfolio Terminal. Explore my projects, skills, and contact info through an interactive command-line interface." />
+    <meta name="theme-color" content="#0d0d0d" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet" />
+    <title>Tejas Hirani — Terminal Portfolio</title>
   </head>
   <body>
-    <div id="terminal">
-      <a id="before"></a>
-    </div>
-    <div id="theme-switcher">
-    <button onclick="setTheme('dark')">🌙 Dark</button>
-    <button onclick="setTheme('light')">☀️ Light</button>
-    <button onclick="setTheme('matrix')">🧪 Matrix</button>
-  </div>
-    <div id="command" onclick="$('texter').focus();">
-      <textarea
-        type="text"
-        id="texter"
-        onkeyup="typeIt(this, event)"
-        onkeydown="typeIt(this, event); 
-                   moveIt(this.value.length, event)"
-        onkeypress="typeIt(this, event);"
-        autofocus
-      ></textarea>
-      <div id="liner">
-        <span id="typer"></span><b class="cursor" id="cursor">█</b>
-      </div>
-    </div>
-    <script src="js/caret.js"></script>
-    <script src="js/commands.js"></script>
-    <script src="js/main.js"></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ──────────────────────────────────────────────
+   CSS Custom Properties — Theme System
+   ────────────────────────────────────────────── */
+
+:root,
+[data-theme="matrix"] {
+  --bg:       #0d0d0d;
+  --surface:  #111111;
+  --border:   #1a3a1a;
+  --text:     #00ff41;
+  --muted:    #00882a;
+  --accent:   #00ff41;
+  --accent2:  #00cc33;
+  --error:    #ff4444;
+  --success:  #00ff41;
+  --warning:  #ffcc00;
+  --cursor:   #00ff41;
+  --prompt:   #00cc33;
+  --scrollbar:#1a3a1a;
+}
+
+[data-theme="dracula"] {
+  --bg:       #282a36;
+  --surface:  #21222c;
+  --border:   #44475a;
+  --text:     #f8f8f2;
+  --muted:    #6272a4;
+  --accent:   #bd93f9;
+  --accent2:  #ff79c6;
+  --error:    #ff5555;
+  --success:  #50fa7b;
+  --warning:  #f1fa8c;
+  --cursor:   #bd93f9;
+  --prompt:   #8be9fd;
+  --scrollbar:#44475a;
+}
+
+[data-theme="nord"] {
+  --bg:       #2e3440;
+  --surface:  #242933;
+  --border:   #3b4252;
+  --text:     #eceff4;
+  --muted:    #4c566a;
+  --accent:   #88c0d0;
+  --accent2:  #81a1c1;
+  --error:    #bf616a;
+  --success:  #a3be8c;
+  --warning:  #ebcb8b;
+  --cursor:   #88c0d0;
+  --prompt:   #81a1c1;
+  --scrollbar:#3b4252;
+}
+
+[data-theme="gruvbox"] {
+  --bg:       #282828;
+  --surface:  #1d2021;
+  --border:   #3c3836;
+  --text:     #ebdbb2;
+  --muted:    #928374;
+  --accent:   #fabd2f;
+  --accent2:  #fe8019;
+  --error:    #cc241d;
+  --success:  #98971a;
+  --warning:  #d79921;
+  --cursor:   #fabd2f;
+  --prompt:   #b8bb26;
+  --scrollbar:#3c3836;
+}
+
+[data-theme="solarized"] {
+  --bg:       #002b36;
+  --surface:  #073642;
+  --border:   #094555;
+  --text:     #839496;
+  --muted:    #586e75;
+  --accent:   #268bd2;
+  --accent2:  #2aa198;
+  --error:    #dc322f;
+  --success:  #859900;
+  --warning:  #b58900;
+  --cursor:   #268bd2;
+  --prompt:   #2aa198;
+  --scrollbar:#094555;
+}
+
+[data-theme="cyberpunk"] {
+  --bg:       #0a0a0f;
+  --surface:  #0d0d15;
+  --border:   #ff00ff33;
+  --text:     #f0f0ff;
+  --muted:    #9090bb;
+  --accent:   #ffff00;
+  --accent2:  #ff00ff;
+  --error:    #ff0055;
+  --success:  #00ffcc;
+  --warning:  #ffcc00;
+  --cursor:   #ffff00;
+  --prompt:   #ff00ff;
+  --scrollbar:#ff00ff33;
+}
+
+[data-theme="monokai"] {
+  --bg:       #272822;
+  --surface:  #1e1f1c;
+  --border:   #3e3d32;
+  --text:     #f8f8f2;
+  --muted:    #75715e;
+  --accent:   #a6e22e;
+  --accent2:  #fd971f;
+  --error:    #f92672;
+  --success:  #a6e22e;
+  --warning:  #e6db74;
+  --cursor:   #f8f8f0;
+  --prompt:   #66d9e8;
+  --scrollbar:#3e3d32;
+}
+
+[data-theme="retro"] {
+  --bg:       #1a0e00;
+  --surface:  #140b00;
+  --border:   #3d2b00;
+  --text:     #ffb000;
+  --muted:    #996600;
+  --accent:   #ffd000;
+  --accent2:  #ff8c00;
+  --error:    #ff4400;
+  --success:  #ffb000;
+  --warning:  #ffd000;
+  --cursor:   #ffb000;
+  --prompt:   #ff8c00;
+  --scrollbar:#3d2b00;
+}
+
+/* ──────────────────────────────────────────────
+   Base Styles
+   ────────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow: hidden;
+}
+
+#app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ──────────────────────────────────────────────
+   Scrollbar
+   ────────────────────────────────────────────── */
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+/* ──────────────────────────────────────────────
+   Terminal Output Line Colors
+   ────────────────────────────────────────────── */
+
+.line-input   { color: var(--accent); }
+.line-output  { color: var(--text); }
+.line-error   { color: var(--error); }
+.line-success { color: var(--success); }
+.line-muted   { color: var(--muted); }
+.line-accent  { color: var(--accent2); }
+.line-banner  { color: var(--accent); }
+.line-warning { color: var(--warning); }
+
+/* ──────────────────────────────────────────────
+   Cursor blink animation
+   ────────────────────────────────────────────── */
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.cursor-blink {
+  display: inline-block;
+  width: 0.6em;
+  height: 1.1em;
+  background: var(--cursor);
+  animation: blink 1.1s step-end infinite;
+  vertical-align: text-bottom;
+  margin-left: 1px;
+}
+
+/* ──────────────────────────────────────────────
+   Scanline overlay (subtle CRT feel)
+   ────────────────────────────────────────────── */
+
+.scanlines::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.04) 2px,
+    rgba(0,0,0,0.04) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ──────────────────────────────────────────────
+   Theme transition
+   ────────────────────────────────────────────── */
+
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ──────────────────────────────────────────────
+   XTerm overlay
+   ────────────────────────────────────────────── */
+
+.xterm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.xterm-overlay-header {
+  padding: 8px 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.xterm-overlay-body {
+  flex: 1;
+  padding: 12px;
+  overflow: hidden;
+}
+
+/* ──────────────────────────────────────────────
+   Mobile responsive
+   ────────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  html, body {
+    font-size: 12px;
+  }
+}
+
+/* ──────────────────────────────────────────────
+   Table in help output
+   ────────────────────────────────────────────── */
+
+.cmd-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 4px 0;
+}
+
+.cmd-table td {
+  padding: 2px 12px 2px 0;
+  vertical-align: top;
+}
+
+.cmd-table td:first-child {
+  color: var(--accent);
+  white-space: nowrap;
+  min-width: 160px;
+}
+
+.cmd-table td:last-child {
+  color: var(--text);
+}
+
+/* ──────────────────────────────────────────────
+   Weather (Terminal Style)
+   ────────────────────────────────────────────── */
+
+.weather-city {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.weather-main {
+  color: var(--text);
+}
+
+.weather-details {
+  color: var(--muted);
+  font-size: 0.9em;
+}
+
+.weather-forecast-table {
+  border-collapse: collapse;
+  margin-top: 2px;
+}
+
+.weather-forecast-table td {
+  padding-right: 20px;
+}
+
