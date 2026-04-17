@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte'
-  import Terminal from './lib/components/Terminal.svelte'
+  import Desktop from './lib/components/Desktop.svelte'
   import { loadSavedTheme } from './lib/themes'
 
   onMount(() => {
@@ -8,4 +8,13 @@
   })
 </script>
 
-<Terminal />
+<Desktop />
+
+<style :global>
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+</style>

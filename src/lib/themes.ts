@@ -18,7 +18,11 @@ export const THEMES: Theme[] = [
   { id: 'retro',     name: 'Retro',     description: 'Amber CRT monitor vibes',                   emoji: '📺' },
 ]
 
+import { writable } from 'svelte/store'
+
 const STORAGE_KEY = 'tjhirani-theme'
+
+export const themeStore = writable<string>('matrix')
 
 export function getThemeIds(): string[] {
   return THEMES.map(t => t.id)
@@ -33,19 +37,18 @@ export function applyTheme(id: string): boolean {
   if (!theme) return false
   document.documentElement.setAttribute('data-theme', id)
   localStorage.setItem(STORAGE_KEY, id)
+  themeStore.set(id)
   return true
 }
 
 export function loadSavedTheme(): string {
   const saved = localStorage.getItem(STORAGE_KEY)
-  if (saved && getTheme(saved)) {
-    applyTheme(saved)
-    return saved
-  }
-  applyTheme('matrix')
-  return 'matrix'
+  const themeId = (saved && getTheme(saved)) ? saved : 'matrix'
+  applyTheme(themeId)
+  return themeId
 }
 
 export function getCurrentTheme(): string {
+  if (typeof document === 'undefined') return 'matrix'
   return document.documentElement.getAttribute('data-theme') ?? 'matrix'
 }

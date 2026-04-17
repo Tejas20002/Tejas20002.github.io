@@ -5,7 +5,7 @@
   import OutputLine from './OutputLine.svelte'
   import TerminalInput from './TerminalInput.svelte'
   import WebSSHOverlay from './WebSSHOverlay.svelte'
-  import { getBanner } from '../commands/core'
+  // Banner removed for cleaner UI
 
   let scrollEl: HTMLDivElement
   let inputRef: TerminalInput
@@ -43,27 +43,15 @@
   }
 
   onMount(() => {
-    // Show banner on load
-    terminalStore.addLines(getBanner())
-    inputRef?.focus()
+    // Focus input on load (banner removed)
+    inputRef?.focus();
   })
 </script>
 
 <svelte:window on:click={handleWindowClick} />
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<div class="terminal-wrapper scanlines">
-  <!-- ── Title bar (decorative) ──────────────────────────────────────────── -->
-  <div class="title-bar">
-    <div class="traffic-lights">
-      <span class="light red"></span>
-      <span class="light yellow"></span>
-      <span class="light green"></span>
-    </div>
-    <span class="title-text">visitor@portfolio:~ — Terminal Portfolio</span>
-    <div class="title-spacer"></div>
-  </div>
-
+<div class="terminal-wrapper">
   <!-- ── Scrollable area ──────────────────────────────────────────────────── -->
   <div class="terminal-content scanlines" bind:this={scrollEl}>
     <div class="padding-wrapper">
@@ -102,47 +90,12 @@
   .terminal-wrapper {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    background: var(--bg);
+    height: 100%;
+    width: 100%;
+    background: rgba(var(--bg-rgb, 0, 0, 0), 0.5); /* 50% transparent */
     position: relative;
+    overflow: hidden;
   }
-
-  /* ── Title bar ─────────────────────────────────────────────────────────── */
-  .title-bar {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 12px;
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
-    flex-shrink: 0;
-    user-select: none;
-  }
-
-  .traffic-lights {
-    display: flex;
-    gap: 6px;
-  }
-
-  .light {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
-  .light.red    { background: #ff5f57; }
-  .light.yellow { background: #febc2e; }
-  .light.green  { background: #28c840; }
-
-  .title-text {
-    color: var(--muted);
-    font-size: 0.8em;
-    flex: 1;
-    text-align: center;
-  }
-
-  .title-spacer { width: 54px; }
 
   /* ── Content area (scrollable) ───────────────────────────────────────── */
   .terminal-content {
